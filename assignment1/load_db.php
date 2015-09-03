@@ -1,6 +1,6 @@
 <?php
 /*Name: Shweta Zutshi
-Assignment1: Load the table with 1000 unique users
+Assignment1: Load the table with 1000 unique users using a randomuser api
 */
 
 //hiding db info 
