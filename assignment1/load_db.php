@@ -14,7 +14,7 @@ if($db->connect_errno > 0){
 }
 
 //getting user from random users
-$json = file_get_contents("http://api.randomuser.me/?results=10");
+$json = file_get_contents("http://api.randomuser.me/?results=1000");
 #print_r($json);
 
 $json_array = json_decode($json);
