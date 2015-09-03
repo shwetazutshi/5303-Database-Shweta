@@ -7,7 +7,7 @@ Assignment1: Load the table with 1000 unique users
 $dbinfo = json_decode(file_get_contents("/home/szutshi/5303-Database-Shweta/db.config.json"));
 
 //connecting to database
-$db = new mysqli($dbinfo->user,$dbinfo->password,$dbinfo->host,$dbinfo->dbname);
+$db = new mysqli($dbinfo->host,$dbinfo->user,$dbinfo->password,$dbinfo->dbname);
 
 if($db->connect_errno > 0){
     die('Unable to connect to database [' . $db->connect_error . ']');
