@@ -52,7 +52,7 @@ for($i=0;$i<sizeof($json_array->results);$i++)
 	}
 	
 	//if there is no error, it will go to second query
-	if(!$result1->num_rows>0)
+	if($result1->num_rows == 0)
 	{
 		//query to insert values into the table
 		$sql2 = "
