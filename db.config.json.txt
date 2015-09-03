@@ -1,0 +1,6 @@
+{
+	"dbname" : "szutshi",
+	"user" : "szutshi",
+	"password" : "szutshi2015",
+	"host" : "localhost"
+}
