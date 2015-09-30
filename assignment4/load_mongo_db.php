@@ -26,5 +26,3 @@ for($i=0;$i<sizeof($document->results);$i++)
 	//inserting the user info one by one
 	$collection->insert($document->results[$i]);
 }
-
-?>
