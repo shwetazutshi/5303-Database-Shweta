@@ -1,20 +1,20 @@
 <?php
 /*Name: Shweta Zutshi
-Assignment1: Load the table with 1000 unique users
+Assignment1: Load the table with 1000 unique users using a randomuser api
 */
 
 //hiding db info 
 $dbinfo = json_decode(file_get_contents("/home/szutshi/5303-Database-Shweta/db.config.json"));
 
 //connecting to database
-$db = new mysqli($dbinfo->user,$dbinfo->password,$dbinfo->host,$dbinfo->dbname);
+$db = new mysqli($dbinfo->host,$dbinfo->user,$dbinfo->password,$dbinfo->dbname);
 
 if($db->connect_errno > 0){
     die('Unable to connect to database [' . $db->connect_error . ']');
 }
 
 //getting user from random users
-$json = file_get_contents("http://api.randomuser.me/?results=10");
+$json = file_get_contents("http://api.randomuser.me/?results=1000");
 #print_r($json);
 
 $json_array = json_decode($json);
@@ -52,7 +52,7 @@ for($i=0;$i<sizeof($json_array->results);$i++)
 	}
 	
 	//if there is no error, it will go to second query
-	if(!$result1->num_rows>0)
+	if($result1->num_rows == 0)
 	{
 		//query to insert values into the table
 		$sql2 = "
