@@ -1,5 +1,5 @@
 ### Title: Sql Flight Assignment
-### Your Name: Shweta Zutshi
+### Name: Shweta Zutshi
 
 #### Question 1:
 Print a passenger list for flight 3 on 4-1
