@@ -1,6 +1,6 @@
 <?php
 	error_reporting(1);
-	$db = new mysqli("localhost", "szutshi", "szutshi015", "szutshi");
+	$db = new mysqli("localhost", "szutshi", "szutshi2015", "szutshi");
 
 	if ($db->connect_errno) {
 		echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
